@@ -1,0 +1,44 @@
+.searchbar {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: lightpink;
+}
+.form {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+
+  border-radius: 3px;
+  overflow: hidden;
+}
+.button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.button:hover {
+  opacity: 1;
+}
+.icon {
+  fill: white;
+}
+.input {
+  display: inline-block;
+  width: 100%;
+  font: inherit;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 5px;
+}
+.input::placeholder {
+  font: inherit;
+  font-size: 18px;
+}
