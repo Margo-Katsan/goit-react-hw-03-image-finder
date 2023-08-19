@@ -9,8 +9,9 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    maxWidth: 'calc(100vw - 48px)',
-    maxHeight: 'calc(100vh - 24px)',
+    padding: 0,
+    border: 0,
+    background: 0,
   },
     overlay: {
     position: 'fixed',
@@ -35,11 +36,7 @@ export const ModalImage = ({isOpen, onRequestClose, src, alt}) => {
       onRequestClose={onRequestClose}
       style={customStyles}
     >
-      <div>
-        <div className={css.modal}>
-          <img src={src} alt={alt} />
-        </div>
-      </div>
+      <img className={css.image} src={src} alt={alt} />
     </Modal>
   )
 }
