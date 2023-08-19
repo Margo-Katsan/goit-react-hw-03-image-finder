@@ -44,7 +44,6 @@ export class App extends Component {
             this.setState({ loadMoreBtn: false });
             NotificationManager.info('Sorry, there are no images matching your search query. Please try again.');
           }
-          
         }
         else {
           this.setState({ loading: false });
