@@ -27,7 +27,6 @@ export class App extends Component {
       this.setState({ loading: true })
       
       try {
-        this.saveScrollPosition();
         const queryWithoutId = this.state.query.slice(this.state.query.indexOf("/") + 1);
 
         if (queryWithoutId) {
