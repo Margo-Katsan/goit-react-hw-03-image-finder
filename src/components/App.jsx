@@ -51,7 +51,8 @@ export class App extends Component {
 
       }
       catch (error) {
-        console.log(error);
+        this.setState({ loading: false, loadMoreBtn: false });
+        NotificationManager.error('Oops! Something went wrong!')
       }
     }
   }
