@@ -45,7 +45,7 @@ export class App extends Component {
           }
         }
         else {
-          this.setState({ loading: false });
+          this.setState({ loading: false, loadMoreBtn: false });
           NotificationManager.warning("You didn't enter anything into the search engine");
         }
 
@@ -72,19 +72,20 @@ export class App extends Component {
     return (
       <div className={css.container}>
         <Searchbar onChangeQuery={this.changeQuery} />
-        {this.state.loading ? (
+        {this.state.loading && (
           <Dna
             visible={this.state.loading}
             height="80"
             width="80"
             ariaLabel="dna-loading"
             wrapperStyle={{
-            marginRight: "auto",
-            marginLeft: "auto"
+              marginRight: "auto",
+              marginLeft: "auto"
             }}
             wrapperClass="dna-wrapper"
           />
-        ): (
+        )}
+        {!this.state.loading && (
           <ImageGallery imagesGallery={this.state.images} />
         ) }
         
