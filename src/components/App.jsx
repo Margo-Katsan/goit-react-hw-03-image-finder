@@ -85,7 +85,7 @@ export class App extends Component {
             wrapperClass="dna-wrapper"
           />
         )}
-        {!this.state.loading && (
+        {this.state.images && (
           <ImageGallery imagesGallery={this.state.images} />
         ) }
         
